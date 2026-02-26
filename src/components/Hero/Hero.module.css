@@ -24,6 +24,16 @@
   color: var(--color-text);
 }
 
+@keyframes revealLeft {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0%   0 0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 .word {
   display: block;
   clip-path: inset(0 100% 0 0);
@@ -69,7 +79,7 @@
 
 .badge {
   position: absolute;
-  right: -3.5rem;
+  right: -2rem;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
   font-family: var(--font-display);

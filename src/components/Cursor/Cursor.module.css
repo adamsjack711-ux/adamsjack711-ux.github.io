@@ -1,0 +1,36 @@
+.dot,
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  margin-left: -3px;
+  margin-top: -3px;
+}
+
+.ring {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--color-accent);
+  margin-left: -16px;
+  margin-top: -16px;
+  transition: width 200ms ease, height 200ms ease, margin 200ms ease, opacity 200ms ease;
+  opacity: 0.6;
+}
+
+.ring.expanded {
+  width: 52px;
+  height: 52px;
+  margin-left: -26px;
+  margin-top: -26px;
+  opacity: 1;
+}
